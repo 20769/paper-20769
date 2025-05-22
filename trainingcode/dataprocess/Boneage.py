@@ -34,8 +34,6 @@ class BoneAgeDataset(Dataset):
 
         if len(y.shape) == 1:
             y = y.unsqueeze(0)
-
-        # 数据增强
         x = self.data_augmentation(x)
 
         return x, T, y
